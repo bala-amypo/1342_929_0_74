@@ -17,10 +17,6 @@ public class LocationController {
     @Autowired
     LocationService lcs;
 
-    // public LocationController(LocationService lcs){
-    //     this.lcs=lcs;
-    // }
-
     @PostMapping("/locations")
     public Location addLocation(@RequestBody Location loc){
         return lcs.createLocation(loc);
