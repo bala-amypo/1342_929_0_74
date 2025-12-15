@@ -6,5 +6,5 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class LocationController {
     @GetMapping("/locations")
-    public List<Location
+
 }
