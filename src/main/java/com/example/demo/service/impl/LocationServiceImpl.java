@@ -9,11 +9,11 @@ import com.example.demo.entity.Location;
 import com.example.demo.repository.LocationRepository;
 import com.example.demo.service.LocationService;
 @Service
-public class LocationServiceImpl implements LocationService{
+public class LocationServiceImpl implements LocationService {
     @Autowired
     LocationRepository lrp;
     @Override
-    public Location createLocation(Location location) {
+    public Location createLocation(Location location){
         if(location.getLatitude()>90){
             throw new IllegalArgumentException("latitude");
         }
@@ -21,7 +21,7 @@ public class LocationServiceImpl implements LocationService{
     }
 
     @Override
-    public List<Location> getAllLocations() {
+    public List<Location> getAllLocations(){
         return lrp.findAll();
     }
 }
