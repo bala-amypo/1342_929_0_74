@@ -21,10 +21,10 @@ public class NewfileServiceImpl implements NewfileService{
         return rep.save(newfile);
     }
 
-    @Override
-    public NewfileEntity getidval(Long id) {
-       return rep.findById(id);
-    }
+    // @Override
+    // public NewfileEntity getidval(Long id) {
+    //    return rep.findById(id);
+    // }
 
     @Override
     public List<NewfileEntity> getall() {
@@ -38,11 +38,20 @@ public class NewfileServiceImpl implements NewfileService{
         existing.setEmail(newfile.getEmail());
 return rep.save(existing);
     }
-
+    @Override
+    public NewfileEntity getidval(Long id) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getidval'");
+    }
     @Override
     public void delete(Long id) {
-        
-       rep.delete(Long id);
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'delete'");
     }
+
+    // @Override
+    // public void delete(Long id) {
+    //    rep.delete(Long id);
+    // }
     
 }
