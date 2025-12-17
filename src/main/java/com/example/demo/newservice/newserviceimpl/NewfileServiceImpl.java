@@ -5,6 +5,8 @@ import com.example.demo.newentity.NewfileEntity;
 import com.example.demo.newservice.NewfileService;
 @Service
 public class NewfileServiceImpl implements NewfileService{
+
+    private final NewfileRepo rep;
     @Override
     public NewfileEntity savedata(NewfileEntity newfile) {
         
