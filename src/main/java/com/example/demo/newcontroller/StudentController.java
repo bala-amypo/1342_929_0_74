@@ -27,7 +27,7 @@ public NewfileEntity getStudent(@PathVariable Long id) {
 return service.getidval(id);
 }
 @PutMapping("/{id}")
-public Student updateStudent(@PathVariable Long id,
+public NewfileEntity updateStudent(@PathVariable Long id,
 @Valid @RequestBody Student student){
 return service.update(id, student);
 }
@@ -36,4 +36,3 @@ return service.update(id, student);
 // service.deleteStudent(id);
 // return ResponseEntity.ok("Student deleted successfully");}
  }
-}
