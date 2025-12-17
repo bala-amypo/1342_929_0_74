@@ -41,7 +41,8 @@ return rep.save(existing);
 
     @Override
     public void delete(Long id) {
-       
+        
+       rep.delete(Long id);
     }
     
 }
