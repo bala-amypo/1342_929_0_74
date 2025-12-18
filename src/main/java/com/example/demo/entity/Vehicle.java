@@ -26,5 +26,6 @@ public class Vehicle {
     private float remainder;
     @PositiveOrZero
     private Double value;
+    
 
 }
