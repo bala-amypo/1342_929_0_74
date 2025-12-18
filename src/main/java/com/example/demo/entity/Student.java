@@ -39,13 +39,11 @@ public class Student {
     )
     private List<Course> courses;
 
-    // 🔹 Helper method
     public void setIdCard(IdCard idCard) {
         this.idCard = idCard;
         idCard.setStudent(this);
     }
 
-    // 🔹 Getters & Setters
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
 
