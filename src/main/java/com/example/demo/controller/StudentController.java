@@ -1,4 +1,4 @@
-package com.example.demo.controller;
+package main.java.com.example.demo.controller;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,7 +15,7 @@ this.service = service;
 }
 // CREATE
 @PostMapping
-public ResponseEntity<Student> createStudent(@Valid @RequestBodyStudent student) {
+public ResponseEntity<Student> createStudent(@Valid @RequestBody Student student) {
 return new ResponseEntity<>(service.saveStudent(student),HttpStatus.CREATED);
 }
 // READ ALL
@@ -36,7 +36,7 @@ return service.updateStudent(id, student);
 }
 // DELETE
 @DeleteMapping("/{id}")
-public ResponseEntity<String> deleteStudent(@PathVariable Longid) {
+public ResponseEntity<String> deleteStudent(@PathVariable Long id) {
 service.deleteStudent(id);
 return ResponseEntity.ok("Student deleted successfully");}
 }

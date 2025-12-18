@@ -1,4 +1,4 @@
-package com.example.demo.service;
+package main.java.com.example.demo.service;
 import com.example.demoaiml.entity.Student;
 import java.util.List;
 public interface StudentService {
