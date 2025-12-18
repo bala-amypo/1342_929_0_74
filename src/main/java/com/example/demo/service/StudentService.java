@@ -1,13 +1,26 @@
 package com.example.demo.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.example.demo.entity.Student;
+import com.example.demo.repository.StudentRepository;
+
 import java.util.List;
 
-public interface StudentService {
+@Service
+public class StudentServiceImpl implements StudentService {
 
-    Student saveStudent(Student student);
-    // Student getStudentById(Long id);
-    // List<Student> getAllStudents();
-    // Student updateStudent(Long id, Student student);
-    // void deleteStudent(Long id);
+    @Autowired
+    private StudentRepository studentRepo;
+
+    @Override
+    public Student saveStudent(Student student) {
+        return studentRepo.save(student);
+    }
+
+    @Override
+    public List<Student> getAllStudents() {
+        return studentRepo.findAll();
+    }
 }
