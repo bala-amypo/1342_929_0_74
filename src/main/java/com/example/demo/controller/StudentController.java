@@ -1,21 +1,15 @@
 package com.example.demo.controller;
-
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import com.example.demo.entity.Student;
 import com.example.demo.service.StudentService;
-
 import java.util.List;
-
 @RestController
 @RequestMapping("/students")
 public class StudentController {
-
     private final StudentService service;
-
     public StudentController(StudentService service) {
         this.service = service;
     }
