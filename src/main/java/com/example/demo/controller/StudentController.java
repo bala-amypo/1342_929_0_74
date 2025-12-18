@@ -25,25 +25,25 @@ public class StudentController {
         return new ResponseEntity<>(service.saveStudent(student), HttpStatus.CREATED);
     }
 
-    @GetMapping
-    public List<Student> getAllStudents() {
-        return service.getAllStudents();
-    }
+    // @GetMapping
+    // public List<Student> getAllStudents() {
+    //     return service.getAllStudents();
+    // }
 
-    @GetMapping("/{id}")
-    public Student getStudent(@PathVariable Long id) {
-        return service.getStudentById(id);
-    }
+    // @GetMapping("/{id}")
+    // public Student getStudent(@PathVariable Long id) {
+    //     return service.getStudentById(id);
+    // }
 
-    @PutMapping("/{id}")
-    public Student updateStudent(@PathVariable Long id,
-                                 @Valid @RequestBody Student student) {
-        return service.updateStudent(id, student);
-    }
+    // @PutMapping("/{id}")
+    // public Student updateStudent(@PathVariable Long id,
+    //                              @Valid @RequestBody Student student) {
+    //     return service.updateStudent(id, student);
+    // }
 
-    @DeleteMapping("/{id}")
-    public ResponseEntity<String> deleteStudent(@PathVariable Long id) {
-        service.deleteStudent(id);
-        return ResponseEntity.ok("Student deleted successfully");
-    }
+    // @DeleteMapping("/{id}")
+    // public ResponseEntity<String> deleteStudent(@PathVariable Long id) {
+    //     service.deleteStudent(id);
+    //     return ResponseEntity.ok("Student deleted successfully");
+    // }
 }

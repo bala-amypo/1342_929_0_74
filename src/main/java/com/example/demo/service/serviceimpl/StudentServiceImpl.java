@@ -23,27 +23,27 @@ public class StudentServiceImpl implements StudentService {
         return repo.save(student);
     }
 
-    @Override
-    public Student getStudentById(Long id) {
-        return repo.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("Student not found"));
-    }
+    // @Override
+    // public Student getStudentById(Long id) {
+    //     return repo.findById(id)
+    //             .orElseThrow(() -> new ResourceNotFoundException("Student not found"));
+    // }
 
-    @Override
-    public List<Student> getAllStudents() {
-        return repo.findAll();
-    }
+    // @Override
+    // public List<Student> getAllStudents() {
+    //     return repo.findAll();
+    // }
 
-    @Override
-    public Student updateStudent(Long id, Student student) {
-        Student existing = getStudentById(id);
-        existing.setName(student.getName());
-        existing.setEmail(student.getEmail());
-        return repo.save(existing);
-    }
+    // @Override
+    // public Student updateStudent(Long id, Student student) {
+    //     Student existing = getStudentById(id);
+    //     existing.setName(student.getName());
+    //     existing.setEmail(student.getEmail());
+    //     return repo.save(existing);
+    // }
 
-    @Override
-    public void deleteStudent(Long id) {
-        repo.delete(getStudentById(id));
-    }
+    // @Override
+    // public void deleteStudent(Long id) {
+    //     repo.delete(getStudentById(id));
+    // }
 }
